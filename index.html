@@ -4,511 +4,516 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Trattoria Da Gianni | Cucina Tipica Bolognese dal 1984</title>
+  <title>Trattoria Da Gianni | Cucina e Sfoglia a Mano dal 1984 | Bologna</title>
   
-  <!-- Polices Google Fonts : Playfair Display (Serif chaleureux) & Plus Jakarta Sans -->
+  <!-- Polices éditoriales premium : Fraunces (serif expressif & artisanal) + Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   
   <style>
+    :root {
+      --bg-cream: #FAF6F0;
+      --paper-card: #F4EFE6;
+      --ink: #1C1817;
+      --sangiovese: #5C1D24;
+      --sangiovese-dark: #3F1217;
+      --cotto: #B84A28;
+      --tuorlo: #C88A2C;
+      --ardesia: #221E1C;
+    }
     body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: #FAF7F2;
-      color: #1C1917;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--ink);
     }
-    h1, h2, h3, .font-serif {
-      font-family: 'Playfair Display', Georgia, serif;
+    .font-serif-display {
+      font-family: 'Fraunces', Georgia, serif;
+      font-optical-sizing: auto;
     }
-    .hero-bg {
-      background-image: linear-gradient(to right, rgba(28, 25, 23, 0.85) 0%, rgba(28, 25, 23, 0.4) 60%, rgba(28, 25, 23, 0.7) 100%), url('assets/hero.jpg');
-      background-size: cover;
-      background-position: center;
+    .bg-pattern-linen {
+      background-color: var(--bg-cream);
+      background-image: radial-gradient(rgba(28, 24, 23, 0.04) 1px, transparent 1px);
+      background-size: 18px 18px;
+    }
+    .chalk-border {
+      border: 1px dashed rgba(244, 239, 230, 0.25);
     }
   </style>
 </head>
-<body class="antialiased selection:bg-amber-100 selection:text-amber-900">
+<body class="antialiased selection:bg-[#5C1D24] selection:text-[#FAF6F0] bg-pattern-linen pb-24 md:pb-0">
 
   <!-- Bandeau Démo Codabee -->
-  <div class="bg-stone-900 text-stone-300 px-4 py-2 text-xs flex justify-between items-center border-b border-stone-800">
+  <aside aria-label="Informazioni demo" class="bg-[#1C1817] text-[#D8D2C8] px-4 py-2 text-xs flex justify-between items-center border-b border-[#322C2A] z-50 relative">
     <div class="flex items-center gap-2">
-      <span class="inline-block w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-      <span class="font-medium text-stone-200">Proposta di demo realizzata da <strong>Codabee</strong></span>
-      <span class="hidden sm:inline text-stone-400">• Dimostrazione ottimizzata per smartphone e prenotazioni rapide</span>
+      <span class="inline-block w-2 h-2 rounded-full bg-[#C88A2C] animate-pulse"></span>
+      <span class="font-medium text-[#FAF6F0]">Proposta di demo realizzata da <strong class="text-white">Codabee</strong></span>
+      <span class="hidden sm:inline text-[#9E978E]">— Ottimizzata per smartphone, zero tempi morti e prenotazioni rapide</span>
     </div>
-    <span class="bg-stone-800 text-amber-400 font-mono text-[11px] px-2 py-0.5 rounded border border-stone-700">Bozza Privata (Noindex)</span>
-  </div>
+    <span class="bg-[#2D2624] text-[#C88A2C] text-[11px] font-mono px-2.5 py-0.5 rounded border border-[#3E3532]">Bozza Privata (Noindex)</span>
+  </aside>
 
-  <!-- Barre de contact rapide mobile -->
-  <div class="bg-amber-950 text-amber-100 text-xs py-1.5 px-4 text-center sm:text-left flex justify-between items-center">
-    <span>📍 Via Saragozza 42/B, Bologna • Sotto i portici storici</span>
-    <a href="tel:0512894410" class="hidden sm:flex items-center gap-1 text-amber-300 hover:text-white font-medium">
-      📞 Prenotazioni dirette: 051 289 4410
-    </a>
-  </div>
-
-  <!-- Navigation -->
-  <header class="sticky top-0 z-40 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-stone-200">
-    <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
-      <a href="#" class="flex flex-col">
-        <span class="font-serif text-2xl font-bold tracking-tight text-stone-900">Trattoria Da Gianni</span>
-        <span class="text-[11px] uppercase tracking-widest text-amber-800 font-semibold -mt-1">Bologna dal 1984</span>
+  <!-- En-tête de bottega & Navigation -->
+  <header class="border-b border-[#E8DFD1] bg-[#FAF6F0]/95 backdrop-blur sticky top-0 z-40 transition-all">
+    <div class="max-w-6xl mx-auto px-4 py-3.5 flex items-center justify-between">
+      
+      <!-- Sceau / Logo artisanal -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-full border border-[#5C1D24]/30 bg-[#F4EFE6] flex items-center justify-center text-[#5C1D24] shadow-inner group-hover:border-[#5C1D24] transition-colors">
+          <!-- Sceau gravure SVG : Mattarello & Spighe -->
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m16 8 4-4M4 20l4-4M18.5 4.5l1 1-13 13-1-1 13-13Z" />
+            <path d="M14 6.5 17.5 10M6.5 14 10 17.5" />
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif-display font-bold text-xl sm:text-2xl text-[#1C1817] leading-none tracking-tight">Da Gianni</span>
+          <span class="text-[11px] text-[#5C1D24] font-medium tracking-wide mt-1">Trattoria Bolognese dal 1984</span>
+        </div>
       </a>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-700">
-        <a href="#storia" class="hover:text-amber-800 transition-colors">La Nostra Storia</a>
-        <a href="#menu" class="hover:text-amber-800 transition-colors">Il Menù</a>
-        <a href="#recensioni" class="hover:text-amber-800 transition-colors">Recensioni</a>
-        <a href="#contatti" class="hover:text-amber-800 transition-colors">Orari & Dove Siamo</a>
+      <!-- Navigation discrète -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-[#383330]">
+        <a href="#gesto" class="hover:text-[#5C1D24] transition-colors">Il Mattarello</a>
+        <a href="#lavagna" class="hover:text-[#5C1D24] transition-colors">La Lavagna</a>
+        <a href="#bottega" class="hover:text-[#5C1D24] transition-colors">La Bottega</a>
+        <a href="#tavola" class="hover:text-[#5C1D24] transition-colors">I 40 Coperti</a>
       </nav>
 
+      <!-- Bouton d'action directe au comptoir -->
       <div class="flex items-center gap-3">
-        <a href="#prenota" class="bg-amber-800 hover:bg-amber-900 text-white text-sm font-semibold px-4 py-2.5 rounded-xl shadow-sm transition-all hover:shadow hover:scale-[1.02]">
-          Prenota un Tavolo
+        <a href="tel:0516492831" class="hidden sm:inline-flex items-center gap-2 text-xs font-semibold text-[#1C1817] hover:text-[#5C1D24] transition-colors py-2 px-3">
+          <svg class="w-4 h-4 text-[#5C1D24]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          <span>051 649 2831</span>
+        </a>
+        <a href="#tavola" class="inline-flex items-center gap-2 bg-[#5C1D24] hover:bg-[#3F1217] text-[#FAF6F0] px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold tracking-wide transition-all shadow-sm">
+          <span>Blocca un tavolo</span>
         </a>
       </div>
+
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-bg min-h-[560px] flex items-center text-white py-16 px-4">
-    <div class="max-w-6xl mx-auto w-full">
-      <div class="max-w-2xl space-y-6">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-amber-300 text-xs font-semibold uppercase tracking-wider">
-          <span>✨ Tradizione Gastronomica Petroniana</span>
-        </div>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-          A Bologna, la pasta si tira ancora al matterello.
-        </h1>
-        <p class="text-base sm:text-lg text-stone-200 leading-relaxed font-light">
-          Sotto i portici di Via Saragozza, vi accogliamo con il calore schietto di casa: la sfoglia fresca all'uovo lavorata a mano ogni mattina e il profumo inconfondibile del ragù antico che sobbolle per sei ore.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-3 pt-2">
-          <a href="#prenota" class="bg-amber-700 hover:bg-amber-800 text-white text-center font-bold px-6 py-3.5 rounded-xl shadow-lg transition-transform hover:-translate-y-0.5">
-            Prenota un Tavolo Online
-          </a>
-          <a href="#menu" class="bg-white/15 hover:bg-white/25 backdrop-blur text-white text-center font-semibold px-6 py-3.5 rounded-xl border border-white/30 transition-colors">
-            Scopri il Menù Tradizionale
-          </a>
-        </div>
-        <div class="flex items-center gap-4 text-xs text-stone-300 pt-2">
-          <span class="flex items-center gap-1 text-amber-400 font-bold">★ 4.7/5</span>
-          <span>•</span>
-          <span>Oltre 320 recensioni verificate</span>
-          <span>•</span>
-          <span>Menù consultabile da smartphone</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Histoire & Philosophie -->
-  <section id="storia" class="py-20 px-4 max-w-6xl mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-      <div class="lg:col-span-6 space-y-6">
-        <span class="text-amber-800 font-bold text-xs uppercase tracking-widest block">Quarant'anni di passione</span>
-        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-stone-900 leading-snug">
-          Custodi della vera memoria culinaria di Bologna
-        </h2>
-        <div class="space-y-4 text-stone-700 leading-relaxed text-sm sm:text-base">
-          <p>
-            Era l'autunno del 1984 quando Gianni aprì per la prima volta le porte della trattoria in Via Saragozza con una promessa semplice: difendere la memoria gastronomica della città, portando in tavola solo quello che si cucinava la domenica nelle case di famiglia.
-          </p>
-          <p>
-            Dopo quarant'anni, ogni alba comincia nello stesso modo: uova fresche di collina, farina a fontana sul tagliere e il matterello guidato dalla nostra sfoglina. Nessuna scorciatoia: il nostro ragù cuoce per sei ore intere a fuoco dolcissimo, i tortellini vengono chiusi a mano uno a uno con il mignolo e ogni salume arriva da piccoli produttori fidati dei colli bolognesi e parmensi.
-          </p>
-        </div>
-        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-stone-200">
-          <div>
-            <div class="font-serif text-2xl font-bold text-amber-800">1984</div>
-            <div class="text-xs text-stone-500">Anno di fondazione</div>
-          </div>
-          <div>
-            <div class="font-serif text-2xl font-bold text-amber-800">6 Ore</div>
-            <div class="text-xs text-stone-500">Cottura lenta del ragù</div>
-          </div>
-          <div>
-            <div class="font-serif text-2xl font-bold text-amber-800">100%</div>
-            <div class="text-xs text-stone-500">Sfoglia fatta a mano</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="lg:col-span-6">
-        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-          <img src="assets/tagliatelle.jpg" alt="Tagliatelle al Ragù Antico Tradizionale" class="w-full h-[440px] object-cover">
-          <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-stone-950/90 via-stone-950/50 to-transparent p-6 text-white">
-            <span class="text-xs text-amber-400 font-bold uppercase tracking-wider">Il Piatto Simbolo</span>
-            <h3 class="font-serif text-xl font-bold">Tagliatelle al Ragù Antico</h3>
-            <p class="text-xs text-stone-300 mt-1">Sfoglia ruvida tirata a mano, cartella di manzo, pancetta e 6 ore di cottura lenta.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Le Menù (Interactif avec onglets & prix clairs) -->
-  <section id="menu" class="py-20 bg-stone-100 px-4 border-y border-stone-200">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center space-y-3 mb-10">
-        <span class="text-amber-800 font-bold text-xs uppercase tracking-widest block">Sapori Senza Tempo</span>
-        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-stone-900">Il Menù della Tradizione</h2>
-        <p class="text-sm text-stone-600 max-w-lg mx-auto">
-          Tutti i prezzi sono espressi in euro (€), servizio e coperto inclusi. Piatti preparati quotidianamente con ingredienti freschi locali.
-        </p>
-
-        <!-- Sélecteur d'onglets responsive -->
-        <div class="flex flex-wrap justify-center gap-2 pt-6">
-          <button onclick="showMenuCategory('antipasti')" id="tab-antipasti" class="menu-tab active px-4 py-2 rounded-xl text-xs font-bold transition-all bg-amber-800 text-white shadow-sm">
-            Antipasti
-          </button>
-          <button onclick="showMenuCategory('primi')" id="tab-primi" class="menu-tab px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white text-stone-700 hover:bg-stone-200">
-            Primi della Sfoglia
-          </button>
-          <button onclick="showMenuCategory('secondi')" id="tab-secondi" class="menu-tab px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white text-stone-700 hover:bg-stone-200">
-            Secondi Piatti
-          </button>
-          <button onclick="showMenuCategory('dolci')" id="tab-dolci" class="menu-tab px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white text-stone-700 hover:bg-stone-200">
-            Dolci della Casa
-          </button>
-        </div>
-      </div>
-
-      <!-- Contenu des onglets -->
-      <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-stone-200 space-y-6">
-        
-        <!-- Antipasti -->
-        <div id="cat-antipasti" class="menu-content space-y-6">
-          <div class="flex justify-between items-start border-b border-stone-100 pb-4">
-            <div>
-              <div class="flex items-center gap-2">
-                <h4 class="font-bold text-base text-stone-900">Il Gran Tagliere di Gianni</h4>
-                <span class="text-[10px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded font-semibold uppercase">Per 2 persone</span>
-              </div>
-              <p class="text-xs text-stone-500 mt-1">Mortadella Bologna IGP, Culatello di Zibello DOP, Squacquerone e crescentine fritte calde.</p>
-            </div>
-            <div class="font-serif font-bold text-base text-amber-900 whitespace-nowrap ml-4">16,50 €</div>
-          </div>
-
-          <div class="flex justify-between items-start border-b border-stone-100 pb-4">
-            <div>
-              <h4 class="font-bold text-base text-stone-900">Crescentine Calde e Friggione Tradizionale</h4>
-              <p class="text-xs text-stone-500 mt-1">Cipolle dolci di Medicina stufate lentamente nel pomodoro secondo la ricetta depositata.</p>
-            </div>
-            <div class="font-serif font-bold text-base text-amber-900 whitespace-nowrap ml-4">11,00 €</div>
-          </div>
-
-          <div class="flex justify-between items-start">
-            <div>
-              <h4 class="font-bold text-base text-stone-900">Spuma di Mortadella Artigianale</h4>
-              <p class="text-xs text-stone-500 mt-1">Servita con granella di pistacchi tostati e fette di pane casereccio tostato.</p>
-            </div>
-            <div class="font-serif font-bold text-base text-amber-900 whitespace-nowrap ml-4">9,50 €</div>
-          </div>
-        </div>
-
-        <!-- Primi -->
-        <div id="cat-primi" class="menu-content hidden space-y-6">
-          <div class="flex justify-between items-start border-b border-stone-100 pb-4">
-            <div>
-              <div class="flex items-center gap-2">
-                <h4 class="font-bold text-base text-stone-900">Tagliatelle al Ragù Antico Tradizionale</h4>
-                <span class="text-[10px] bg-red-100 text-red-800 px-1.5 py-0.5 rounded font-semibold uppercase">Famoso</span>
-              </div>
-              <p class="text-xs text-stone-500 mt-1">Cartella di manzo, pancetta dolce e cottura lenta di 6 ore a fuoco dolcissimo.</p>
-            </div>
-            <div class="font-serif font-bold text-base text-amber-900 whitespace-nowrap ml-4">14,50 €</div>
-          </div>
-
-          <div class="flex justify-between items-start border-b border-stone-100 pb-4">
-            <div>
-              <div class="flex items-center gap-2">
-                <h4 class="font-bold text-base text-stone-900">Tortellini in Brodo di Cappone</h4>
-                <span class="text-[10px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded font-semibold uppercase">Chiusi a mano</span>
-              </div>
-              <p class="text-xs text-stone-500 mt-1">Ripieno classico di maiale, prosciutto, mortadella e Parmigiano Reggiano 30 mesi.</p>
-            </div>
-            <div class="font-serif font-bold text-base text-amber-900 whitespace-nowrap ml-4">17,00 €</div>
-          </div>
-
-          <div class="flex justify-between items-start border-b border-stone-100 pb-4">
-            <div>
-              <h4 class="font-bold text-base text-stone-900">Lasagne Verdi alla Bolognese</h4>
-              <p class="text-xs text-stone-500 mt-1">Sfoglia agli spinaci, besciamella vellutata e ragù classico dorato al forno.</p>
-            </div>
-            <div class="font-serif font-bold text-base text-amber-900 whitespace-nowrap ml-4">15,50 €</div>
-          </div>
-
-          <div class="flex justify-between items-start">
-            <div>
-              <h4 class="font-bold text-base text-stone-900">Gramigna Paglia e Fieno con Salsiccia e Zafferano</h4>
-              <p class="text-xs text-stone-500 mt-1">Salsiccia fresca paesana sfumata al vino bianco e zafferano profumato.</p>
-            </div>
-            <div class="font-serif font-bold text-base text-amber-900 whitespace-nowrap ml-4">13,50 €</div>
-          </div>
-        </div>
-
-        <!-- Secondi -->
-        <div id="cat-secondi" class="menu-content hidden space-y-6">
-          <div class="flex justify-between items-start border-b border-stone-100 pb-4">
-            <div>
-              <div class="flex items-center gap-2">
-                <h4 class="font-bold text-base text-stone-900">Cotoletta alla Bolognese "La Petroniana"</h4>
-                <span class="text-[10px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded font-semibold uppercase">Icona</span>
-              </div>
-              <p class="text-xs text-stone-500 mt-1">Lombata di vitello dorata nel burro, coperta di prosciutto di Parma e Parmigiano fuso.</p>
-            </div>
-            <div class="font-serif font-bold text-base text-amber-900 whitespace-nowrap ml-4">19,50 €</div>
-          </div>
-
-          <div class="flex justify-between items-start border-b border-stone-100 pb-4">
-            <div>
-              <h4 class="font-bold text-base text-stone-900">Guancetta di Vitello Brasata al Sangiovese</h4>
-              <p class="text-xs text-stone-500 mt-1">Cottura fondente di 8 ore, servita su morbido purè di patate all'olio extravergine.</p>
-            </div>
-            <div class="font-serif font-bold text-base text-amber-900 whitespace-nowrap ml-4">18,50 €</div>
-          </div>
-
-          <div class="flex justify-between items-start">
-            <div>
-              <h4 class="font-bold text-base text-stone-900">Grigliata di Salsiccia Nostrana con Friggione</h4>
-              <p class="text-xs text-stone-500 mt-1">Salsiccia tipica dei colli accompagnata da patate al forno profumate al rosmarino.</p>
-            </div>
-            <div class="font-serif font-bold text-base text-amber-900 whitespace-nowrap ml-4">15,00 €</div>
-          </div>
-        </div>
-
-        <!-- Dolci -->
-        <div id="cat-dolci" class="menu-content hidden space-y-6">
-          <div class="flex justify-between items-start border-b border-stone-100 pb-4">
-            <div>
-              <h4 class="font-bold text-base text-stone-900">Torta di Riso Bolognese degli Addobbi</h4>
-              <p class="text-xs text-stone-500 mt-1">Ricetta secolare con mandorle tritate, cedro candito e liquore all'amaretto.</p>
-            </div>
-            <div class="font-serif font-bold text-base text-amber-900 whitespace-nowrap ml-4">6,50 €</div>
-          </div>
-
-          <div class="flex justify-between items-start border-b border-stone-100 pb-4">
-            <div>
-              <h4 class="font-bold text-base text-stone-900">Zuppa Inglese Tradizionale all'Alchermes</h4>
-              <p class="text-xs text-stone-500 mt-1">Pan di Spagna imbevuto d'Alchermes di Bologna, crema pasticcera e cioccolato fondente.</p>
-            </div>
-            <div class="font-serif font-bold text-base text-amber-900 whitespace-nowrap ml-4">7,00 €</div>
-          </div>
-
-          <div class="flex justify-between items-start">
-            <div>
-              <h4 class="font-bold text-base text-stone-900">Crema di Mascarpone Montata a Mano</h4>
-              <p class="text-xs text-stone-500 mt-1">Spumosa e delicata, con scaglie di cioccolato extra-fondente 75%.</p>
-            </div>
-            <div class="font-serif font-bold text-base text-amber-900 whitespace-nowrap ml-4">6,00 €</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Avis Clients Réels (Recensioni) -->
-  <section id="recensioni" class="py-20 px-4 max-w-6xl mx-auto">
-    <div class="text-center space-y-3 mb-12">
-      <span class="text-amber-800 font-bold text-xs uppercase tracking-widest block">La Voce dei Nostri Ospiti</span>
-      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-stone-900">Cosa dicono di noi</h2>
-      <div class="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 px-3 py-1.5 rounded-full text-xs text-amber-900 font-medium">
-        <span>★ 4.7 su 5 su Google</span>
-        <span>•</span>
-        <span>320+ recensioni verificate</span>
-      </div>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between space-y-4">
-        <p class="text-stone-700 text-xs sm:text-sm italic leading-relaxed">
-          "Il vero ragù, come non lo sentivo da vent'anni. Tagliatelle ruvide al punto giusto che trattengono il sugo, Petroniana sontuosa e l'accoglienza di una volta."
-        </p>
-        <div class="pt-4 border-t border-stone-100 flex items-center justify-between text-xs">
-          <div>
-            <div class="font-bold text-stone-900">Marco B.</div>
-            <div class="text-stone-400">Bolognese doc</div>
-          </div>
-          <span class="text-amber-500">★★★★★</span>
-        </div>
-      </div>
-
-      <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between space-y-4">
-        <p class="text-stone-700 text-xs sm:text-sm italic leading-relaxed">
-          "Tappa obbligatoria a Bologna. I tortellini in brodo di cappone sono pura poesia: piccoli, perfetti e profumati. Porzioni generose e conto onestissimo."
-        </p>
-        <div class="pt-4 border-t border-stone-100 flex items-center justify-between text-xs">
-          <div>
-            <div class="font-bold text-stone-900">Elena & Matteo</div>
-            <div class="text-stone-400">Milano</div>
-          </div>
-          <span class="text-amber-500">★★★★★</span>
-        </div>
-      </div>
-
-      <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between space-y-4">
-        <p class="text-stone-700 text-xs sm:text-sm italic leading-relaxed">
-          "Le crescentine calde con la spuma di mortadella creano dipendenza! Sala piena ma servizio impeccabile e caloroso. Prenotate prima!"
-        </p>
-        <div class="pt-4 border-t border-stone-100 flex items-center justify-between text-xs">
-          <div>
-            <div class="font-bold text-stone-900">Giulia V.</div>
-            <div class="text-stone-400">Bologna</div>
-          </div>
-          <span class="text-amber-500">★★★★★</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Module de Réservation Instantanée & Coordonnées -->
-  <section id="prenota" class="py-20 bg-stone-900 text-white px-4">
-    <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+  <!-- SECTION 1 : BLOCCO D'APERTURA (Hero Asimmetrico — Il Gesto e il Fuoco Lento) -->
+  <section id="gesto" class="py-12 sm:py-20 px-4 max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
       
-      <!-- Formulaire rapide -->
-      <div class="lg:col-span-7 bg-stone-800/80 p-8 rounded-3xl border border-stone-700 shadow-xl space-y-6">
-        <div>
-          <span class="text-amber-400 font-bold text-xs uppercase tracking-widest block">Nessuna attesa al telefono</span>
-          <h3 class="text-2xl sm:text-3xl font-bold font-serif mt-1">Prenota il tuo tavolo</h3>
-          <p class="text-xs text-stone-400 mt-1">Riceverai una conferma immediata tramite WhatsApp o SMS.</p>
+      <!-- Colonne éditoriale asymétrique gauche (7 cols) -->
+      <div class="lg:col-span-7 space-y-6">
+        
+        <!-- Marqueur de quartier sobre -->
+        <div class="flex items-center gap-2.5 text-xs text-[#5C1D24] font-semibold">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <span>Via Saragozza 42/B • Sotto i portici di Bologna</span>
         </div>
 
-        <form onsubmit="event.preventDefault(); alert('Grazie! Nella versione finale collegata a Da Gianni, la prenotazione viene trasmessa istantaneamente via WhatsApp o gestionale.');" class="space-y-4">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-xs text-stone-300 font-medium mb-1">Nome e Cognome</label>
-              <input type="text" required placeholder="Mario Rossi" class="w-full bg-stone-900 border border-stone-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500">
-            </div>
-            <div>
-              <label class="block text-xs text-stone-300 font-medium mb-1">Telefono (WhatsApp)</label>
-              <input type="tel" required placeholder="+39 340 000 0000" class="w-full bg-stone-900 border border-stone-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500">
-            </div>
-          </div>
+        <!-- Titre d'impact de Redacteur-IT -->
+        <h1 class="font-serif-display text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-bold text-[#1C1817] leading-[1.12] tracking-tight">
+          Sette uova per chilo di farina. Il mattarello di legno d'acero. <span class="italic font-normal text-[#5C1D24]">Sei ore di fuoco lento.</span>
+        </h1>
 
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div>
-              <label class="block text-xs text-stone-300 font-medium mb-1">Data</label>
-              <input type="date" required class="w-full bg-stone-900 border border-stone-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500">
-            </div>
-            <div>
-              <label class="block text-xs text-stone-300 font-medium mb-1">Orario</label>
-              <select class="w-full bg-stone-900 border border-stone-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500">
-                <option>12:30 (Pranzo)</option>
-                <option>13:15 (Pranzo)</option>
-                <option>19:45 (Cena)</option>
-                <option>20:30 (Cena)</option>
-                <option>21:15 (Cena)</option>
-              </select>
-            </div>
-            <div>
-              <label class="block text-xs text-stone-300 font-medium mb-1">Ospiti</label>
-              <select class="w-full bg-stone-900 border border-stone-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500">
-                <option>2 persone</option>
-                <option>3 persone</option>
-                <option>4 persone</option>
-                <option>5+ persone</option>
-              </select>
-            </div>
-          </div>
+        <!-- Texte narratif d'atelier -->
+        <p class="text-base sm:text-lg text-[#383330] leading-relaxed max-w-2xl font-light">
+          A Bologna il ragù non ammette scorciatoie: borbotta dal primo mattino nella ghisa pesante. Dal 1984, sotto i portici di Via Saragozza, Gianni non ha mai delegato la sfoglia a una macchina. La farina incontra le uova sul tagliere di legno, viene tirata a mano fino a diventare ruvida e sottile al punto giusto, pronta ad accogliere il condimento senza scivolare via. Niente orpelli, nessuna teatralità da gourmet: solo il silenzio dell'impasto alle sette del mattino e l'odore del burro nostrano.
+        </p>
 
-          <div>
-            <label class="block text-xs text-stone-300 font-medium mb-1">Note (intolleranze o richieste speciali)</label>
-            <input type="text" placeholder="Es. Tavolo tranquillo vicino alla finestra" class="w-full bg-stone-900 border border-stone-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500">
-          </div>
+        <!-- Actions immédiates sans friction -->
+        <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+          <a href="tel:0516492831" class="inline-flex justify-center items-center gap-2.5 bg-[#5C1D24] hover:bg-[#3F1217] text-[#FAF6F0] px-6 py-3.5 rounded-lg font-semibold text-sm transition-all shadow-md">
+            <svg class="w-4 h-4 text-[#C88A2C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <span>Chiama per stasera — 051 649 2831</span>
+          </a>
 
-          <button type="submit" class="w-full bg-amber-700 hover:bg-amber-600 text-white font-bold py-3.5 rounded-xl text-sm transition-colors shadow-lg">
-            Invia Richiesta di Prenotazione
-          </button>
-        </form>
+          <a href="https://wa.me/390516492831?text=Buongiorno%2C%20vorrei%20riservare%20un%20tavolo%20per%20stasera%20da%20Gianni." target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center gap-2.5 bg-[#F4EFE6] hover:bg-[#ECE4D6] text-[#1C1817] border border-[#D5C9B7] px-5 py-3.5 rounded-lg font-medium text-sm transition-colors">
+            <!-- Icone WhatsApp SVG épurée -->
+            <svg class="w-4 h-4 text-[#2E7D32]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg>
+            <span>Scrivi su WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Note de service manuscrite -->
+        <div class="pt-3 border-t border-[#E8DFD1] flex items-center gap-6 text-xs text-[#635A54]">
+          <div class="flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#5C1D24]"></span>
+            <span>Due turni serali: 19:45 e 21:15</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#C88A2C]"></span>
+            <span>40 coperti in sala</span>
+          </div>
+          <div class="hidden sm:flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#1C1817]"></span>
+            <span>Chiuso il lunedì</span>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Coordonnées et horaires -->
-      <div id="contatti" class="lg:col-span-5 space-y-6">
-        <div>
-          <span class="text-amber-400 font-bold text-xs uppercase tracking-widest block">Informazioni Pratiche</span>
-          <h3 class="text-2xl font-bold font-serif mt-1">Vieni a trovarci</h3>
-        </div>
-
-        <div class="space-y-4 text-xs sm:text-sm text-stone-300">
-          <div class="flex items-start gap-3">
-            <span class="text-amber-400 text-base">📍</span>
-            <div>
-              <strong class="text-white block">Indirizzo:</strong>
-              Via Saragozza 42/B, 40123 Bologna (BO)<br>
-              <span class="text-stone-400 text-xs">Sotto i portici storici • Zona Porta Saragozza</span>
-            </div>
+      <!-- Colonne visuelle asymétrique droite (5 cols) avec composition matière -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative bg-[#F4EFE6] p-3 rounded-2xl border border-[#D5C9B7] shadow-xl">
+          <div class="overflow-hidden rounded-xl">
+            <img src="assets/hero.jpg" alt="Gianni al tagliere di legno mentre tira la sfoglia al mattarello" class="w-full h-[380px] sm:h-[420px] object-cover hover:scale-105 transition-transform duration-700 ease-out">
           </div>
-
-          <div class="flex items-start gap-3">
-            <span class="text-amber-400 text-base">🕒</span>
-            <div>
-              <strong class="text-white block">Orari di Apertura:</strong>
-              <div class="mt-1 space-y-0.5 text-stone-300">
-                <div>Martedì – Sabato: 12:30–14:30 | 19:30–22:30</div>
-                <div>Domenica: 12:30–15:00 (Pranzo domenicale)</div>
-                <div class="text-amber-400/90 font-medium">Lunedì: Chiuso per riposo settimanale</div>
-              </div>
-            </div>
+          
+          <!-- Étiquette artisanale décentrée en cartouche -->
+          <div class="absolute -bottom-5 -left-4 sm:-left-6 bg-[#1C1817] text-[#FAF6F0] p-4 rounded-xl border border-[#3E3532] shadow-2xl max-w-[280px]">
+            <span class="text-[10px] text-[#C88A2C] font-semibold tracking-wider uppercase block">La Disciplina Petroniana</span>
+            <p class="font-serif-display text-sm italic mt-1 text-[#E0D8CC]">
+              « La sfoglia non deve essere lucida, ma ruvida come la tela di lino per abbracciare il ragù. »
+            </p>
           </div>
-
-          <div class="flex items-start gap-3">
-            <span class="text-amber-400 text-base">📞</span>
-            <div>
-              <strong class="text-white block">Telefono:</strong>
-              <a href="tel:0512894410" class="text-amber-300 hover:underline">051 289 4410</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="p-4 rounded-2xl bg-stone-800/50 border border-stone-700 text-xs text-stone-400">
-          💡 <strong class="text-stone-200">Consiglio :</strong> Il fine settimana la prenotazione è fortemente consigliata con almeno 24 ore di anticipo.
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-stone-950 text-stone-400 py-10 px-4 text-xs border-t border-stone-900">
+  <!-- Ligne de séparation d'atelier -->
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="h-px bg-gradient-to-r from-transparent via-[#D5C9B7] to-transparent"></div>
+  </div>
+
+  <!-- SECTION 2 : BLOCCO TERROIR & LAVAGNA DEL GIORNO (Centro Pagina — Mercato delle Erbe) -->
+  <section id="lavagna" class="py-16 sm:py-24 px-4 max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+      
+      <!-- Entête & Contexte de Terroir (5 cols) -->
+      <div class="lg:col-span-5 space-y-6">
+        <div class="inline-flex items-center gap-2 text-xs font-semibold text-[#5C1D24] bg-[#F4EFE6] px-3 py-1 rounded border border-[#E0D8CC]">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+          </svg>
+          <span>Spesa fresca ogni mattina ore 06:30</span>
+        </div>
+
+        <h2 class="font-serif-display text-3xl sm:text-4xl font-bold text-[#1C1817] leading-tight">
+          Il banco del Mercato delle Erbe decide cosa entra in pentola stamattina.
+        </h2>
+
+        <p class="text-sm sm:text-base text-[#4A423D] leading-relaxed">
+          Non abbiamo mai stampato un menu da quaranta portate e non cominceremo oggi. Preferiamo fare tre cose, ma fatte come si deve:
+        </p>
+
+        <div class="p-4 bg-[#F4EFE6] border-l-2 border-[#5C1D24] rounded-r-xl space-y-2 text-xs text-[#4A423D]">
+          <strong class="text-[#1C1817] font-semibold block">La regola della lavagna :</strong>
+          <p>
+            Quando una preparazione del mattino finisce, si cancella dalla lavagna in sala con il gesso. Si mangia ciò che il mercato ha portato fresco, senza compromessi con il congelatore.
+          </p>
+        </div>
+
+        <!-- Photo du plat symbole : tagliatelle al ragù autentiche -->
+        <div class="pt-2">
+          <div class="relative rounded-xl overflow-hidden border border-[#D5C9B7] shadow-sm">
+            <img src="assets/tagliatelle.jpg" alt="Tagliatelle al ragù classico battuto al coltello" class="w-full h-52 object-cover">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#1C1817] via-[#1C1817]/60 to-transparent p-3 text-white text-xs">
+              <span class="font-serif-display font-semibold italic text-[#E8DFD1]">Tagliatella ruvida stesa sul banco d'acero</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- La Lavagna d'Ardesia (7 cols) : Tableau noir artisanal des plats guida -->
+      <div class="lg:col-span-7">
+        <div class="bg-[#221E1C] text-[#FAF6F0] p-6 sm:p-10 rounded-2xl shadow-2xl border-4 border-[#322C2A] relative">
+          
+          <!-- En-tête de la lavagna -->
+          <div class="flex justify-between items-baseline border-b border-[#3E3835] pb-4 mb-6">
+            <div>
+              <span class="text-xs uppercase tracking-widest text-[#C88A2C] font-semibold block">Lavagna del Giorno</span>
+              <h3 class="font-serif-display text-2xl sm:text-3xl font-bold text-[#FAF6F0] mt-0.5">I Tre Piatti Guida</h3>
+            </div>
+            <span class="text-[11px] font-mono text-[#A8A098] px-2.5 py-1 rounded bg-[#2D2825] border border-[#3E3835]">Servizio Pranzo & Cena</span>
+          </div>
+
+          <!-- Plats guides écrits avec la précision de Redacteur-IT -->
+          <div class="space-y-8">
+            
+            <!-- Plat 1 -->
+            <article class="space-y-2 pb-6 border-b border-[#352F2C]">
+              <div class="flex justify-between items-baseline gap-4">
+                <h4 class="font-serif-display text-lg sm:text-xl font-bold text-[#FAF6F0] tracking-wide">
+                  Tagliatelle ruvide al ragù classico
+                </h4>
+                <span class="font-mono text-sm sm:text-base font-semibold text-[#C88A2C] shrink-0">14,50 €</span>
+              </div>
+              <p class="text-xs sm:text-sm text-[#C4BCB3] leading-relaxed">
+                Cartella di manzo battuta al coltello, fondo di sedano, carota, cipolla e latte intero a spegnere l'acidità del pomodoro. Sfoglia ruvida che beve il sugo.
+              </p>
+            </article>
+
+            <!-- Plat 2 -->
+            <article class="space-y-2 pb-6 border-b border-[#352F2C]">
+              <div class="flex justify-between items-baseline gap-4">
+                <h4 class="font-serif-display text-lg sm:text-xl font-bold text-[#FAF6F0] tracking-wide">
+                  Tortellini in brodo di cappone
+                </h4>
+                <span class="font-mono text-sm sm:text-base font-semibold text-[#C88A2C] shrink-0">17,00 €</span>
+              </div>
+              <p class="text-xs sm:text-sm text-[#C4BCB3] leading-relaxed">
+                Chiusi uno a uno sul polpastrello del mignolo, con lombo di maiale, prosciutto di Parma DOP, mortadella Bologna IGP e Parmigiano Reggiano 30 mesi.
+              </p>
+            </article>
+
+            <!-- Plat 3 -->
+            <article class="space-y-2">
+              <div class="flex justify-between items-baseline gap-4">
+                <h4 class="font-serif-display text-lg sm:text-xl font-bold text-[#FAF6F0] tracking-wide">
+                  Gramigna al torchio con salsiccia nostrana
+                </h4>
+                <span class="font-mono text-sm sm:text-base font-semibold text-[#C88A2C] shrink-0">13,50 €</span>
+              </div>
+              <p class="text-xs sm:text-sm text-[#C4BCB3] leading-relaxed">
+                Pasta trafilata ruvida a caldo, rosolatura asciutta con salsiccia paesana di collina e sfumata al Trebbiano locale.
+              </p>
+            </article>
+
+          </div>
+
+          <!-- Compléments de carte traditionnels -->
+          <div class="mt-8 pt-6 border-t border-[#3E3835] grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-[#A8A098]">
+            <div class="p-3 bg-[#2A2422] rounded-lg border border-[#3E3835]">
+              <span class="text-[#FAF6F0] font-semibold block mb-0.5">Crescentine & Friggione</span>
+              <span>Cipolle dolci stufate a lungo nel pomodoro con crescentine calde fritte nello strutto (11,00 €).</span>
+            </div>
+            <div class="p-3 bg-[#2A2422] rounded-lg border border-[#3E3835]">
+              <span class="text-[#FAF6F0] font-semibold block mb-0.5">La Petroniana</span>
+              <span>Cotoletta di vitello dorata nel burro, prosciutto di Parma e scaglie di Parmigiano (19,50 €).</span>
+            </div>
+          </div>
+
+          <!-- Note sur les allergènes et pain maison -->
+          <div class="mt-6 flex items-center justify-between text-[11px] text-[#7A726A]">
+            <span>Coperto e pane di bottega inclusi</span>
+            <span>Vini sfusi dei Colli Bolognesi</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3 : LES VOIX DU QUARTIER (Quaderno degli Ospiti — Pas de faux badges SaaS) -->
+  <section class="py-12 bg-[#F4EFE6] border-y border-[#E2D8C7] px-4">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="max-w-xl space-y-2 mb-8">
+        <span class="text-xs text-[#5C1D24] font-semibold tracking-wide uppercase block">Dalla Sala di Via Saragozza</span>
+        <h3 class="font-serif-display text-2xl sm:text-3xl font-bold text-[#1C1817]">
+          Il quaderno delle memorie sul bancone
+        </h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-[#FAF6F0] p-6 rounded-xl border border-[#E0D8CC] shadow-sm flex flex-col justify-between space-y-4">
+          <p class="text-sm text-[#383330] leading-relaxed italic">
+            « Il vero ragù, come non lo sentivo da vent'anni. Tagliatelle ruvide che trattengono il condimento fino all'ultima forchettata e la schiettezza di Gianni al banco. »
+          </p>
+          <div class="pt-3 border-t border-[#E8DFD1] text-xs">
+            <strong class="text-[#1C1817] block">Marco B.</strong>
+            <span class="text-[#7A726A]">Abitante di Porta Saragozza</span>
+          </div>
+        </div>
+
+        <div class="bg-[#FAF6F0] p-6 rounded-xl border border-[#E0D8CC] shadow-sm flex flex-col justify-between space-y-4">
+          <p class="text-sm text-[#383330] leading-relaxed italic">
+            « Tappa obbligatoria a Bologna. I tortellini in brodo di cappone sono pura maestria: piccoli, perfetti e profumati. Niente trucchi per turisti. »
+          </p>
+          <div class="pt-3 border-t border-[#E8DFD1] text-xs">
+            <strong class="text-[#1C1817] block">Elena & Matteo</strong>
+            <span class="text-[#7A726A]">In viaggio da Milano</span>
+          </div>
+        </div>
+
+        <div class="bg-[#FAF6F0] p-6 rounded-xl border border-[#E0D8CC] shadow-sm flex flex-col justify-between space-y-4">
+          <p class="text-sm text-[#383330] leading-relaxed italic">
+            « Sala piena ma ritmo sereno. La cotoletta alla bolognese gratinata con il brodo ristretto è una delle migliori della città. Prenotate per tempo. »
+          </p>
+          <div class="pt-3 border-t border-[#E8DFD1] text-xs">
+            <strong class="text-[#1C1817] block">Giulia V.</strong>
+            <span class="text-[#7A726A]">Bolognese doc</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4 : BLOCCO D'AZIONE SERALE (I 40 Coperti — Contatto Diretto al Banco) -->
+  <section id="tavola" class="py-16 sm:py-24 px-4 max-w-5xl mx-auto">
+    <div class="bg-[#1C1817] text-[#FAF6F0] rounded-3xl p-8 sm:p-12 lg:p-16 border-2 border-[#38302D] shadow-2xl">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Contenu éditorial percutant de Redacteur-IT -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <div class="inline-flex items-center gap-2 text-xs text-[#C88A2C] font-mono tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-[#C88A2C]"></span>
+            <span>DISPONIBILITÀ LIMITATA A SALA</span>
+          </div>
+
+          <!-- Titre percutant -->
+          <h2 class="font-serif-display text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#FAF6F0] leading-tight">
+            Quaranta coperti. Due turni la sera. <span class="text-[#C88A2C] italic">La tavola si blocca a voce.</span>
+          </h2>
+
+          <!-- Micro-copy de réassurance -->
+          <p class="text-sm sm:text-base text-[#D4CCC0] leading-relaxed font-light">
+            Odiamo i moduli digitali impersonali e le caselle da spuntare. A bottega il telefono squilla proprio accanto al banco, tra il rumore dei piatti e il taglio del pane caldo. Se preferisci scriverci, mandaci due righe su WhatsApp con orario e numero di persone: ti confermiamo il tavolo di persona tra una padellata e l'altra.
+          </p>
+
+          <!-- Deux actions directes prioritaires -->
+          <div class="pt-4 space-y-3.5">
+            
+            <!-- Action 1 prioritaire : Appel direct au téléphone -->
+            <a href="tel:0516492831" class="flex items-center justify-between bg-[#5C1D24] hover:bg-[#72252D] text-[#FAF6F0] p-4 sm:p-5 rounded-xl border border-[#7A2830] transition-all group shadow-lg">
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg bg-[#3F1217] flex items-center justify-center text-[#C88A2C] group-hover:scale-110 transition-transform">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-xs text-[#E0D8CC]">Azione prioritaria al banco</div>
+                  <div class="font-serif-display text-base sm:text-lg font-bold text-white tracking-wide">
+                    Chiama in trattoria — 051 649 2831
+                  </div>
+                </div>
+              </div>
+              <svg class="w-5 h-5 text-[#C88A2C] group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </a>
+
+            <!-- Action 2 rapide : WhatsApp spontané -->
+            <a href="https://wa.me/390516492831?text=Buongiorno%20Gianni%2C%20vorrei%20bloccare%20un%20tavolo%20per%20stasera%3A%20siamo%20in%20...%20persone%20alle%20ore%20..." target="_blank" rel="noopener noreferrer" class="flex items-center justify-between bg-[#2A2320] hover:bg-[#342C28] text-[#FAF6F0] p-4 sm:p-5 rounded-xl border border-[#3E3531] transition-all group">
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg bg-[#1C1817] flex items-center justify-center text-[#2E7D32] group-hover:scale-110 transition-transform">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-xs text-[#B8AEA2]">Azione rapida per messaggi</div>
+                  <div class="font-serif-display text-base sm:text-lg font-bold text-white tracking-wide">
+                    Scrivici su WhatsApp per stasera
+                  </div>
+                </div>
+              </div>
+              <svg class="w-5 h-5 text-[#B8AEA2] group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- Détails pratiques & Horaires de la trattoria (5 cols) -->
+        <div id="bottega" class="lg:col-span-5 bg-[#251F1C] p-6 sm:p-8 rounded-2xl border border-[#3A322E] space-y-5 text-xs sm:text-sm">
+          
+          <div class="border-b border-[#3A322E] pb-4">
+            <span class="text-[11px] uppercase tracking-wider text-[#C88A2C] font-semibold block">Coordinate di Bottega</span>
+            <div class="font-serif-display text-lg font-bold text-white mt-1">Trattoria Da Gianni</div>
+            <p class="text-[#B8AEA2] text-xs mt-1">Via Saragozza 42/B, 40123 Bologna (BO)</p>
+            <p class="text-[#7A726A] text-[11px] mt-0.5">Sotto i portici storici • Zona Porta Saragozza</p>
+          </div>
+
+          <div class="space-y-3 text-xs">
+            <div class="flex items-start gap-3">
+              <svg class="w-4 h-4 text-[#C88A2C] shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <div>
+                <strong class="text-white block font-medium">Orari di Servizio :</strong>
+                <div class="text-[#D4CCC0] mt-1 space-y-1">
+                  <div>Martedì – Sabato: 12:30–14:30 | 19:30–22:30</div>
+                  <div>Domenica: 12:30–15:00 (Solo pranzo tipico)</div>
+                  <div class="text-[#C88A2C] font-medium">Lunedì: Chiuso per riposo e mercato</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 pt-2">
+              <svg class="w-4 h-4 text-[#C88A2C] shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <div>
+                <strong class="text-white block font-medium">Come raggiungerci :</strong>
+                <p class="text-[#B8AEA2] mt-0.5">Linee bus 20 o D con fermata a Porta Saragozza. Parcheggio consigliato in Viale Pepoli.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-[#3A322E] text-[11px] text-[#A89F93] leading-relaxed">
+            Consiglio del patron : il venerdì e il sabato sera i quaranta coperti si esauriscono rapidamente. Contattaci con almeno 24 ore di anticipo.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer sobre et authentique -->
+  <footer class="border-t border-[#E8DFD1] bg-[#FAF6F0] py-10 px-4 text-xs text-[#635A54]">
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
       <div class="text-center sm:text-left">
-        <div class="font-serif font-bold text-white text-base">Trattoria Da Gianni</div>
-        <p class="text-stone-500 mt-0.5">P.IVA 02489120374 • Cucina tradizionale emiliana a Bologna</p>
+        <div class="font-serif-display font-bold text-[#1C1817] text-base">Trattoria Da Gianni</div>
+        <p class="text-[#7A726A] mt-0.5">Via Saragozza 42/B, Bologna • P.IVA 02489120374</p>
       </div>
-      <div class="text-stone-500 text-center sm:text-right">
-        <div>Demo realizzata da <span class="text-stone-300 font-semibold">Codabee</span> • Hosting Cloudflare Pages</div>
-        <div class="text-[11px] text-stone-600 mt-0.5">Tutti i diritti riservati • Conforme RGPD e Codice Privacy</div>
+      <div class="text-center sm:text-right text-[#7A726A]">
+        <div>Proposta di maquette artigianale realizzata da <strong class="text-[#1C1817]">Codabee</strong></div>
+        <div class="text-[11px] text-[#A89F93] mt-0.5">Hosting Cloudflare Pages ad alte prestazioni • Zéro tracking invasivo</div>
       </div>
     </div>
   </footer>
 
-  <!-- Script de changement d'onglets pour le Menù -->
-  <script>
-    function showMenuCategory(catId) {
-      // Masquer tous les contenus
-      document.querySelectorAll('.menu-content').forEach(el => el.classList.add('hidden'));
-      // Afficher le contenu ciblé
-      const target = document.getElementById('cat-' + catId);
-      if (target) target.classList.remove('hidden');
+  <!-- BARRE D'ACTION COLLANTE MOBILE (Mobile-first pour les 80% d'utilisateurs smartphone) -->
+  <aside aria-label="Azioni rapide mobile" class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-[#1C1817]/95 backdrop-blur border-t border-[#38302D] p-3 shadow-2xl">
+    <div class="grid grid-cols-2 gap-2.5 max-w-md mx-auto">
+      
+      <!-- Bouton Téléphone immédiat -->
+      <a href="tel:0516492831" class="flex items-center justify-center gap-2 bg-[#5C1D24] text-[#FAF6F0] py-3 px-3 rounded-lg font-semibold text-xs shadow-md active:scale-95 transition-transform">
+        <svg class="w-4 h-4 text-[#C88A2C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+        <span>Chiama (051 649)</span>
+      </a>
 
-      // Réinitialiser le style des onglets
-      document.querySelectorAll('.menu-tab').forEach(btn => {
-        btn.classList.remove('bg-amber-800', 'text-white', 'shadow-sm');
-        btn.classList.add('bg-white', 'text-stone-700');
-      });
+      <!-- Bouton WhatsApp immédiat -->
+      <a href="https://wa.me/390516492831?text=Buongiorno%20Gianni%2C%20vorrei%20riservare%20un%20tavolo%20per%20stasera." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-[#2E7D32] text-white py-3 px-3 rounded-lg font-semibold text-xs shadow-md active:scale-95 transition-transform">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+        </svg>
+        <span>WhatsApp</span>
+      </a>
 
-      // Activer l'onglet cliqué
-      const activeBtn = document.getElementById('tab-' + catId);
-      if (activeBtn) {
-        activeBtn.classList.remove('bg-white', 'text-stone-700');
-        activeBtn.classList.add('bg-amber-800', 'text-white', 'shadow-sm');
-      }
-    }
-  </script>
+    </div>
+  </aside>
+
 </body>
 </html>
